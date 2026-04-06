@@ -21,7 +21,7 @@ app.use(session({
 }))
 //   First go on postman and post login {usernam:data }--- then get  /profile
 app.post("/login",(req,res)=>{
-    const{username}=req.body;
+    const {username}=req.body;
     req.session.user=username;
     res.send("user loggedin")
 })
