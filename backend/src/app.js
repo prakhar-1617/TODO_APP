@@ -1,6 +1,7 @@
 const express=require("express")
 const app=express()
 const todoRoutes=require("./routes/todo.routes")
+const userRoutes=require("./routes/user.routes")
 const cookieParser=require("cookie-parser")
 const session=require("express-session")
 
@@ -38,4 +39,5 @@ app.get("/logout",(req,res)=>{
 })
 
 app.use("/api/todos",todoRoutes)
+app.use("/api/users",userRoutes)
 module.exports=app;

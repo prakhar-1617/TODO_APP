@@ -13,7 +13,7 @@ const getTodos=async(req,res)=>{
     try{
         const todo=await Todo.find();
         res.status(200).json({data:todo})
-        
+    
     }
     catch(error){
         res.status(500).json({"error":error.message})
